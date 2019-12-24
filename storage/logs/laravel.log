@@ -1,0 +1,125 @@
+[2019-12-24 09:03:55] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `users` add unique `users_email_unique`(`email`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `users` add unique `users_email_unique`(`email`)) at F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:669)
+[stacktrace]
+#0 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('alter table `us...', Array, Object(Closure))
+#1 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(464): Illuminate\\Database\\Connection->run('alter table `us...', Array, Object(Closure))
+#2 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(97): Illuminate\\Database\\Connection->statement('alter table `us...')
+#3 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(290): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(167): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('users', Object(Closure))
+#6 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\database\\migrations\\2014_10_12_000000_create_users_table.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(387): CreateUsersTable->up()
+#8 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(396): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(197): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateUsersTable), 'up')
+#10 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(162): Illuminate\\Database\\Migrations\\Migrator->runUp('F:\\\\XAMPP729\\\\htd...', 1, false)
+#11 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(109): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(71): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#15 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#17 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#18 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#19 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(202): Illuminate\\Container\\Container->call(Array)
+#20 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#22 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\symfony\\console\\Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 {main}
+
+[previous exception] [object] (PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes at F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:463)
+[stacktrace]
+#0 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(463): PDOStatement->execute()
+#1 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(662): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('alter table `us...', Array)
+#2 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('alter table `us...', Array, Object(Closure))
+#3 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(464): Illuminate\\Database\\Connection->run('alter table `us...', Array, Object(Closure))
+#4 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(97): Illuminate\\Database\\Connection->statement('alter table `us...')
+#5 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(290): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(167): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('users', Object(Closure))
+#8 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\database\\migrations\\2014_10_12_000000_create_users_table.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(387): CreateUsersTable->up()
+#10 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(396): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#11 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(197): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateUsersTable), 'up')
+#12 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(162): Illuminate\\Database\\Migrations\\Migrator->runUp('F:\\\\XAMPP729\\\\htd...', 1, false)
+#13 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(109): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#14 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(71): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#15 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#16 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#17 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(202): Illuminate\\Container\\Container->call(Array)
+#22 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\symfony\\console\\Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+"} 
+[2019-12-24 09:06:22] local.ERROR: Command "migratephp" is not defined.
+
+Did you mean one of these?
+    migrate
+    migrate:fresh
+    migrate:install
+    migrate:refresh
+    migrate:reset
+    migrate:rollback
+    migrate:status {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"migratephp\" is not defined.
+
+Did you mean one of these?
+    migrate
+    migrate:fresh
+    migrate:install
+    migrate:refresh
+    migrate:reset
+    migrate:rollback
+    migrate:status at F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\symfony\\console\\Application.php:670)
+[stacktrace]
+#0 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\symfony\\console\\Application.php(236): Symfony\\Component\\Console\\Application->find('migratephp')
+#1 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2019-12-24 09:11:25] local.ERROR: Unable to prepare route [api/user] for serialization. Uses Closure. {"exception":"[object] (LogicException(code: 0): Unable to prepare route [api/user] for serialization. Uses Closure. at F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php:917)
+[stacktrace]
+#0 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\RouteCacheCommand.php(62): Illuminate\\Routing\\Route->prepareForSerialization()
+#1 [internal function]: Illuminate\\Foundation\\Console\\RouteCacheCommand->handle()
+#2 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#3 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#4 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#5 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#6 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#7 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(202): Illuminate\\Container\\Container->call(Array)
+#8 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#9 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#10 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(242): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#11 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(214): Illuminate\\Console\\Command->runCommand('route:cache', Array, Object(Illuminate\\Console\\OutputStyle))
+#12 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\OptimizeCommand.php(31): Illuminate\\Console\\Command->call('route:cache')
+#13 [internal function]: Illuminate\\Foundation\\Console\\OptimizeCommand->handle()
+#14 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#15 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#17 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#18 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#19 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(202): Illuminate\\Container\\Container->call(Array)
+#20 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#22 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\symfony\\console\\Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\symfony\\console\\Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\OptimizeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 F:\\XAMPP729\\htdocs\\LARAVEL\\LaravelFactories\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 {main}
+"} 
